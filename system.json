@@ -80,6 +80,12 @@
       "path": "./packs/packs/tables.db",
       "entity": "RollTable"
      },
+    {
+      "name": "techpowers",
+      "label": "Tech Powers",
+      "path": "./packs/packs/techpowers.db",
+      "entity": "Item"
+     },	 
      {
       "name": "weapons",
       "label": "Weapons",

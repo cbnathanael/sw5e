@@ -3,21 +3,22 @@
 /*  Fonts                                    */
 /* ----------------------------------------- */
 @font-face {
-  font-family: 'Modesto Condensed';
+  font-family: 'Russo One';
   font-style: normal;
   font-weight: 400;
-  src: url('../../fonts/modesto-condensed/modesto-condensed.woff2') format('woff2');
+  src: url('./fonts/RussoOne.ttf');
 }
 @font-face {
-  font-family: 'Modesto Condensed';
+  font-family: 'Bungee Inline';
   font-style: normal;
-  font-weight: 700;
-  src: url('../../fonts/modesto-condensed/modesto-condensed-bold.woff2') format('woff2');
+  font-weight: 400;
+  src: url('./fonts/BungeeInline.ttf');
 }
-.modesto {
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
-  font-size: 20px;
-  font-weight: 700;
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('./fonts/OpenSans-Regular.ttf');
 }
 /* ----------------------------------------- */
 /*  Sheet Styles                             */
@@ -175,7 +176,7 @@
   padding: 2px 0;
   border-top: 2px groove #eeede0;
   border-bottom: 2px groove #eeede0;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
 }
@@ -273,7 +274,7 @@
   /* Header Summary Details */
 }
 .sw5e.sheet .sheet-header .header-details {
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
 }
@@ -322,7 +323,7 @@
 .sw5e.sheet .sheet-navigation {
   flex: 0 0 30px;
   margin-bottom: 5px;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
 }
@@ -338,6 +339,7 @@
 .sw5e.sheet .sheet-body {
   flex: 1;
   overflow: hidden;
+  font-family: "Open Sans";
 }
 .sw5e.sheet .filter-list {
   list-style: none;
@@ -487,7 +489,7 @@
   height: 18px;
   line-height: 16px;
   margin: 4px 8px 2px;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
   font-size: 18px;
@@ -519,7 +521,7 @@
   align-items: center;
   height: 28px;
   line-height: 28px;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
 }
@@ -534,7 +536,7 @@
   flex: 0 0 18px;
   margin-top: -1px;
   line-height: 18px;
-  font-family: "Signika", sans-serif;
+  font-family: "Bungee Inline";
   font-size: 12px;
   font-weight: 400;
 }
@@ -544,7 +546,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
   border: 2px groove #eeede0;
@@ -811,7 +813,7 @@
 .sw5e.sheet.actor .inventory-list .inventory-header h3 {
   margin: 0 -5px 0 0;
   padding-left: 5px;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
   font-size: 16px;
@@ -1055,6 +1057,7 @@
 }
 .sw5e.sheet.item .sheet-body {
   overflow: hidden;
+  font-family: "Open Sans";
 }
 .sw5e.sheet.item .sheet-body .tab {
   padding: 0 5px;
@@ -1211,7 +1214,7 @@
   flex: 1;
   margin: 0;
   line-height: 36px;
-  font-family: "Modesto Condensed", "Palatino Linotype", serif;
+  font-family: "Russo One";
   font-size: 20px;
   font-weight: 700;
   color: #4b4a44;
@@ -1356,7 +1359,7 @@
 .sw5e.sheet.actor.character .resource .attribute-value label.recharge {
   height: 32px;
   position: relative;
-  font-family: "Signika", sans-serif;
+  font-family: "Bungee Inline";
   font-size: 11px;
   text-align: center;
   color: #4b4a44;

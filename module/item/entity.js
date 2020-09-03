@@ -180,6 +180,11 @@ export default class Item5e extends Item {
       else if ( act && act.type ) labels.featType = game.i18n.localize(data.damage.length ? "SW5E.Attack" : "SW5E.Action");
       else labels.featType = game.i18n.localize("SW5E.Passive");
     }
+	
+	// Species Items
+	else if ( itemData.type === "species" ) {
+	  labels.species = C.species[data.species];
+	}	
 
     // Equipment Items
     else if ( itemData.type === "equipment" ) {
