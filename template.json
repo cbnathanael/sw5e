@@ -99,10 +99,6 @@
             "value": 0,
             "ability": "wis"
           },
-          "arc": {
-            "value": 0,
-            "ability": "int"
-          },
           "ath": {
             "value": 0,
             "ability": "str"
@@ -110,10 +106,6 @@
           "dec": {
             "value": 0,
             "ability": "cha"
-          },
-          "his": {
-            "value": 0,
-            "ability": "int"
           },
           "ins": {
             "value": 0,
@@ -135,6 +127,10 @@
             "value": 0,
             "ability": "int"
           },
+          "pil": {
+            "value": 0,
+            "ability": "int"
+          },		  
           "prc": {
             "value": 0,
             "ability": "wis"
@@ -147,10 +143,6 @@
             "value": 0,
             "ability": "cha"
           },
-          "rel": {
-            "value": 0,
-            "ability": "int"
-          },
           "slt": {
             "value": 0,
             "ability": "dex"
@@ -162,7 +154,11 @@
           "sur": {
             "value": 0,
             "ability": "wis"
-          }
+          },
+          "tec": {
+            "value": 0,
+            "ability": "int"
+          }		  
         },
         "traits": {
           "senses": "",
@@ -396,7 +392,7 @@
     }
   },
   "Item": {
-    "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "power", "feat", "backpack"],
+    "types": ["weapon", "equipment", "consumable", "tool", "loot", "class", "power", "feat", "species", "backpack"],
     "templates": {
       "itemDescription": {
         "description": {
