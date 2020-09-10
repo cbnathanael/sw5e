@@ -1,0 +1,71 @@
+<div class="tab dynamiceffects" data-tab="dynamiceffects" data-group="primary">
+    {{#if canEdit}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.Active"}}</label>
+            <input type="checkbox" name="flags.dynamiceffects.equipActive" value="1" data-dtype="{{Bollean}}" {{checked flags.dynamiceffects.equipActive}}/>
+        </div>
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.Cursed"}}</label>
+            <input type="checkbox" name="flags.dynamiceffects.alwaysActive" value="1" data-dtype="{{Boolean}}" {{checked flags.dynamiceffects.alwaysActive}}/>
+        </div>
+    {{/if}}
+            
+    {{#if needsAttuned}}
+    <div class="form-group">
+        <label>{{localize "dynamiceffects.Attuned"}}</label>
+        <input type="checkbox" name="data.attuned" value="1" data-dtype="{{data.attuned}}" {{checked data.attuned}}/>
+    </div>
+    {{/if}}
+    {{#if showEffects}}
+        <ol class="dynamiceffects-effect-list">
+            <li class="flexrow effect-header">
+                <div class="effect-name">{{localize "dynamiceffects.PassiveEffectName"}}</div>
+                <div class="effect-mode">{{localize "dynamiceffects.EffectMode"}}</div>
+                <div class="effect-value">{{localize "dynamiceffects.EffectValue"}}</div>
+                {{#if canEdit}}
+                    <div class="effect-controls">
+                    <a class="effect-create" title={{localize dynamiceffects.Create}} data-type="effect"><i class="fas fa-plus"></i> {{ localize "dynamiceffects.Add"}}</a>
+                    </div>
+                {{/if}}
+            </li>
+
+
+            {{#each passives as |effect iid|}}
+            <li class="flexrow effect" effect-id="{{effect.id}}">
+                <span class="effect-name">{{effect.label}}</span>
+                <span class="effect-mode">{{effect.mode}}</span>
+                <span class="effect-value">{{effect.value}}</span>
+            {{#if ../canEdit}}
+                <div class="effect-controls">
+                    <a class="effect-edit" title={{localize dynamiceffects.Edit}}><i class="fas fa-edit"></i></a>
+                    <a class="effect-delete" title={{localize dynamiceffects.Delete}}><i class="fas fa-trash"></i></a>
+                </div>
+            {{/if}}
+            </li>
+            {{/each}}
+            <li class="flexrow effect-header">
+                <div class="effect-name">{{localize "dynamiceffects.ActiveEffectName"}}</div>
+                <div class="effect-mode">{{localize "dynamiceffects.EffectMode"}}</div>
+                <div class="effect-value">{{localize "dynamiceffects.EffectValue"}}</div>
+                {{#if canEdit}}
+                    <div class="effect-controls">
+                    <a class="effect-create" title={{localize dynamiceffects.Create}} data-type="effect"><i class="fas fa-plus"></i> {{ localize "dynamiceffects.Add"}}</a>
+                    </div>
+                {{/if}}
+            </li>
+            {{#each actives as |effect iid|}}
+            <li class="flexrow effect" effect-id="{{effect.id}}">
+                <span class="effect-name">{{effect.label}}</span>
+                <span class="effect-mode">{{effect.mode}}</span>
+                <span class="effect-value">{{effect.value}}</span>
+            {{#if ../canEdit}}
+                <div class="effect-controls">
+                    <a class="effect-edit" title={{localize dynamiceffects.Edit}}><i class="fas fa-edit"></i></a>
+                    <a class="effect-delete" title={{localize dynamiceffects.Delete}}><i class="fas fa-trash"></i></a>
+                </div>
+            {{/if}}
+            </li>
+            {{/each}}
+        </ol>
+    {{/if}}
+</div>

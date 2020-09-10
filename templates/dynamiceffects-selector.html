@@ -1,0 +1,177 @@
+<form autocomplete="off">
+    <div class="form-group effectCategory">
+        <label>{{localize "dynamiceffects.category"}}</label>
+        <select name="category" data-dtype="String">
+            {{#select category}}
+                <option value=""></option>
+                {{#each categories as |label val|}}
+                    <option value="{{val}}">{{label}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+
+    <div class="form-group effectType">
+        <label>{{localize "dynamiceffects.EffectTarget"}}</label>
+        <select name="modSpecKey" data-dtype="String">
+            {{#select effect.modSpecKey}}
+                <option value=""></option>
+                {{#each effects as |label val|}}
+                    <option value="{{val}}">{{label}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+
+    <div class="form-group">
+        <label>{{localize "dynamiceffects.EffectMode"}}</label>
+        <select name="mode" data-dtype="String">
+            {{#select effect.mode}}
+                {{#each modes as |val name|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+        </select>
+    </div>
+    {{#if isLanguage}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select spec.value}}
+                <option effect=""></option>
+                {{#each languages as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isDamage}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                <option value=""></option>
+                {{#each damages as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isCUBCondition}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                {{#each cubConditions as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+      {{else if isCondition}}
+      <div class="form-group">
+          <label>{{localize "dynamiceffects.EffectValue"}}</label>
+          <select name="value" data-dtype="String">
+              {{#select effect.value}}
+              {{#each conditions as |name val|}}
+                  <option value="{{val}}">{{name}}</option>
+              {{/each}}
+          {{/select}}
+          </select>
+      </div>
+    {{else if isProficiency}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                {{#each proficiencies as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isToolProf}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                <option value=""></option>
+                {{#each toolProfs as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isArmorProf}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                <option value=""></option>
+                {{#each armorProfs as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isWeaponProf}}
+      <div class="form-group">
+          <label>{{localize "dynamiceffects.EffectValue"}}</label>
+          <select name="value" data-dtype="String">
+              {{#select effect.value}}
+              <option value=""></option>
+              {{#each weaponProfs as |name val|}}
+                  <option value="{{val}}">{{name}}</option>
+              {{/each}}
+          {{/select}}
+          </select>
+      </div>
+    {{else if isAdvantage}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                <option value=""></option>
+                {{#each advantages as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isAbility}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <select name="value" data-dtype="String">
+                {{#select effect.value}}
+                {{#each abilities as |name val|}}
+                    <option value="{{val}}">{{name}}</option>
+                {{/each}}
+            {{/select}}
+            </select>
+        </div>
+    {{else if isTokenMagic}}
+    <div class="form-group">
+        <label>{{localize "dynamiceffects.EffectValue"}}</label>
+        <select name="value" data-dtype="String">
+            {{#select effect.value}}
+            {{#each tokenMagicEffects as |name val|}}
+                <option value="{{val}}">{{name}}</option>
+            {{/each}}
+        {{/select}}
+        </select>
+    </div>
+    {{else}}
+        <div class="form-group">
+            <label>{{localize "dynamiceffects.EffectValue"}}</label>
+            <input type="text" name="value" value="{{effect.value}}" data-dtype="String"/>
+        </div>
+    {{/if}}
+    <div class="form-group">
+        <label>{{localize "dynamiceffects.active"}}</label>
+        <input type="checkbox" name="active" value="1" data-dtype="{{Boolean}}" {{checked effect.active}}/>
+    </div>
+    {{effect.modSpeckey}}
+    {{effect.mode}}
+    {{effect.value}}
+    <button type="submit" name="submit" value="1"><i class="far fa-save"></i> {{localize "dynamiceffects.UpdateEffect"}}</button>
+</form>

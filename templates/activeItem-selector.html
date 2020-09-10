@@ -1,0 +1,20 @@
+<form autocomplete="off">
+  {{localize "dynamiceffects.chooseitem"}}
+
+  <div class="form-group effectType">
+      <label>{{localize "dynamiceffects.itemname"}}</label>
+      <select name="itemId" data-dtype="String">
+          {{#select itemId}}
+              <option value=""></option>
+              {{#each itemList as |label val|}}
+                  <option value="{{val}}">{{label.name}} ({{label.type}})</option>
+              {{/each}}
+          {{/select}}
+      </select>
+  </div>
+
+  <div id="selectactive">
+  <button type="submit" class="activatebutton" id="active" value="1"><i class="far fa-save"></i> {{localize "dynamiceffects.applyeffect"}}</button>
+  <button type="submit" class="activatebutton" id="inactive" value="2"><i class="far fa-save"></i> {{localize "dynamiceffects.unapplyeffect"}}</button>
+  </div>
+</form>

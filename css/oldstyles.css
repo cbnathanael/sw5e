@@ -1,0 +1,125 @@
+.sw5e.item form .item-dynamicitems {
+	padding: 8px 8px 0;
+	overflow-y: auto;
+}
+
+.sw5e.item form .item-dynamicitems label {
+	color: #888;
+	font-weight: bold;
+}
+
+.sw5e.item form .item-dynamicitems select {
+	font-size: 12px;
+	height: 24px;
+}
+
+.item-dynamicitems .inventory-list {
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
+	padding-top: 5px;
+    height: 90%;
+	overflow-y: auto;
+	/* Inventory Item */
+	/* Inventory Header */
+}
+
+.item-dynamicitems .effect-button {
+	border: 1px solid black round;
+	color:black;
+	padding: 0px 0px;
+	text-align: center;
+	font-size: 100%;
+	margin: 0px 0px;
+	cursor: pointer;
+	line-height: 18px;
+	font-weight: bold;
+}
+
+.item-dynamicitems .inventory-list .effect {
+	line-height: 24px;
+	padding: 0;
+	border-bottom: 1px solid #CCC;
+	/* Item Dropdown Summary */
+  }
+.item-dynamicitems .inventory-list .effect .effect-name {
+	cursor: pointer;
+  }
+.item-dynamicitems .inventory-list .effect .effect-name {
+	flex: 0 0 24px;
+	margin-right: 6px;
+	background-size: 36px;
+	background-repeat: no-repeat;
+  }
+.item-dynamicitems .inventory-list .effect .effect-name {
+	flex: 0 0 120px;
+    margin: 0;
+    text-align: left;
+	border-right: 1px solid #CCC;
+  }
+.item-dynamicitems .inventory-list .effect .effect-mode {
+	flex: 0 0 32px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	border-right: 1px solid #CCC;
+}
+.item-dynamicitems .inventory-list .effect .effect-mode {
+	flex: 0 0 48px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	border-right: 1px solid #CCC;
+}
+  .item-dynamicitems .inventory-list .effect .effect-target
+  {
+	flex: 0 0 32px;
+	font-size: 12px;
+	color: #666;
+	text-align: center;
+	border-right: 1px solid #CCC;
+  }
+
+ .item-dynamicitems .inventory-list .inventory-header .effect-controls a.base-effect-create,
+ .item-dynamicitems .inventory-list .inventory-header .effect-controls a.derived-effect-create {
+	width: 100%;
+  }
+.item-dynamicitems .inventory-list .inventory-list .effect-controls a.base-effect-delete,
+.item-dynamicitems .inventory-list .inventory-list .effect-controls a.derived-effect-delete {
+	width: 100%;
+  }
+
+.item-dynamicitems .inventory-list .effect .effect-controls {
+	flex: 0 0 64px;
+  }
+.item-dynamicitems .inventory-list .effect .effect-controls a {
+	display: block;
+	float: left;
+	width: 22px;
+	font-size: 10px;
+	text-align: center;
+	color: #666;
+  }
+  .effectcollecton .inventory-list .effect .effect-summary {
+	flex: 0 0 100%;
+	font-size: 12px;
+	line-height: 16px;
+	padding: 0.25em 0.5em;
+	border-top: 1px solid #CCC;
+	flex-direction: column;
+  }
+  .item-dynamicitems .inventory-list .inventory-header {
+	font-weight: 700;
+	line-height: 20px;
+	background: rgba(0, 0, 0, 0.05);
+  }
+  .item-dynamicitems .inventory-list .inventory-header h3 {
+	flex: 2;
+	font-size: 1em;
+	margin: 0;
+	padding-left: 0px;
+	font-weight: bold;
+  }
+  .item-dynamicitems .inventory-list .inventory-header .effect-controls a {
+	width: 100%;
+  }
